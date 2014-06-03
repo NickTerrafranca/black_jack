@@ -1,10 +1,7 @@
-# This class will need to determine the best score
-# based on the cards that have been dealt.
-
 require_relative 'card'
 require_relative 'deck'
 
-class Hand
+class Hand #< Array
   attr_reader :hand
   def initialize(hand)
     @hand = hand
@@ -25,12 +22,26 @@ class Hand
   count
   end
 
-  def score
+  def gross_score
     score = 0
     @hand.each do |card|
       score += card.value
     end
     score
+  end
+
+  def score
+    count = ace_count
+    score = gross_score
+    while count > 0 && score > 21
+      count -= 1
+      score -= 10
+    end
+    score
+  end
+
+  def add_card(card)
+    @hand << card
   end
 end
 

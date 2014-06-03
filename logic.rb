@@ -12,6 +12,11 @@ require_relative 'hand'
 # p dealer_hand.hand
 card1 = Card.new('A', '♠')
 card2 = Card.new('A', '♥')
-bill = Hand.new([card2, card1])
-p bill.ace_count
+
+card3 = Card.new('5', '♦')
+bill = Hand.new([card1, card2])
+
+bill.add_card(card3)
+
 p bill.score
+
