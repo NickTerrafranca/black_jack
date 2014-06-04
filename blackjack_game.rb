@@ -18,7 +18,7 @@ class BlackjackGame
   end
 
   def begin_game
-    puts "Welcome to Blackjack!"
+    puts 'Welcome to Blackjack!'
     puts
     @players_hand.add_card(@deck)
     @players_hand.add_card(@deck)
