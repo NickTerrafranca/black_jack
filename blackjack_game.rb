@@ -37,7 +37,7 @@ class BlackjackGame
       puts "\nPlayer was delt #{@players_hand.last_card.show_card}"
       puts "Players Score: #{@players_hand.score}"
       if bust?(@players_hand.score)
-        puts 'Bust!'
+        puts "\nBust!"
         break
       end
       puts
@@ -58,7 +58,7 @@ class BlackjackGame
         puts "Dealer was delt #{@dealers_hand.last_card.show_card}"
         puts "Dealer Score: #{@dealers_hand.score}"
         if bust?(@dealers_hand.score)
-          puts 'Bust!'
+          puts "\nBust!"
           break
         end
       end
