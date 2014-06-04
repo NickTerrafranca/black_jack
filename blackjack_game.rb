@@ -23,8 +23,8 @@ class BlackjackGame
     @players_hand.add_card(@deck)
     @dealers_hand.add_card(@deck)
     @dealers_hand.add_card(@deck)
-    puts "\nPlayer was delt #{@players_hand.first_card.show_card}"
-    puts "Player was delt #{@players_hand.last_card.show_card}"
+    puts "\nPlayer was dealt #{@players_hand.first_card.show_card}"
+    puts "Player was dealt #{@players_hand.last_card.show_card}"
     puts "Players Score: #{@players_hand.score}"
   end
 
@@ -33,7 +33,7 @@ class BlackjackGame
     respond = gets.chomp.downcase
     while respond == 'h'
       @players_hand.add_card(@deck)
-      puts "\nPlayer was delt #{@players_hand.last_card.show_card}"
+      puts "\nPlayer was dealt #{@players_hand.last_card.show_card}"
       puts "Players Score: #{@players_hand.score}"
       if bust?(@players_hand.score)
         puts "\nBust!"
@@ -46,13 +46,13 @@ class BlackjackGame
 
   def end_game
     if @players_hand.score <= 21
-      puts "\nDealer was delt #{@dealers_hand.first_card.show_card}"
-      puts "Dealer was delt #{@dealers_hand.last_card.show_card}"
+      puts "\nDealer was dealt #{@dealers_hand.first_card.show_card}"
+      puts "Dealer was dealt #{@dealers_hand.last_card.show_card}"
       puts "Dealer's Score: #{@dealers_hand.score}"
       puts #?
       while @dealers_hand.score < 17
         @dealers_hand.add_card(@deck)
-        puts "Dealer was delt #{@dealers_hand.last_card.show_card}"
+        puts "Dealer was dealt #{@dealers_hand.last_card.show_card}"
         puts "Dealer Score: #{@dealers_hand.score}"
         if bust?(@dealers_hand.score)
           puts "\nBust!"
