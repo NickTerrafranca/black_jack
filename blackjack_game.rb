@@ -19,12 +19,11 @@ class BlackjackGame
 
   def begin_game
     puts 'Welcome to Blackjack!'
-    puts
     @players_hand.add_card(@deck)
     @players_hand.add_card(@deck)
     @dealers_hand.add_card(@deck)
     @dealers_hand.add_card(@deck)
-    puts "Player was delt #{@players_hand.first_card.show_card}"
+    puts "\nPlayer was delt #{@players_hand.first_card.show_card}"
     puts "Player was delt #{@players_hand.last_card.show_card}"
     puts "Players Score: #{@players_hand.score}"
   end
@@ -40,7 +39,6 @@ class BlackjackGame
         puts "\nBust!"
         break
       end
-      puts
       puts "\nHit or stay?"
       respond = gets.chomp.downcase
     end
@@ -48,8 +46,7 @@ class BlackjackGame
 
   def end_game
     if @players_hand.score <= 21
-      puts
-      puts "Dealer was delt #{@dealers_hand.first_card.show_card}"
+      puts "\nDealer was delt #{@dealers_hand.first_card.show_card}"
       puts "Dealer was delt #{@dealers_hand.last_card.show_card}"
       puts "Dealer's Score: #{@dealers_hand.score}"
       puts #?
