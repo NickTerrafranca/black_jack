@@ -1,13 +1,12 @@
 require_relative 'card'
 require_relative 'deck'
-require 'pry'
 
-class Hand #< Array
+class Hand
   attr_reader :hand
   def initialize
     @hand = []
   end
-
+  #?
   def hand
     @hand
   end
@@ -16,7 +15,7 @@ class Hand #< Array
     count = 0
     @hand.each do |card|
       if card.value == 11
-        count +=1
+        count += 1
       end
     end
     count
@@ -40,10 +39,16 @@ class Hand #< Array
     score
   end
 
-  def add_card(card)
+  def add_card(deck)
+    card = deck.deal
     @hand << card
   end
+
+  def last_card
+    @hand.last
+  end
+
+  def first_card
+    @hand.first
+  end
 end
-
-
-

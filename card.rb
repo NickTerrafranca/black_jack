@@ -1,5 +1,3 @@
-require 'pry'
-
 class Card
   attr_reader :rank, :suit
   def initialize(rank, suit)
@@ -25,7 +23,3 @@ class Card
     card = @rank + @suit
   end
 end
-
-# This class should contain the suit and the value
-# and provide methods for determining what type of
-# card it is (e.g. face card or ace).
