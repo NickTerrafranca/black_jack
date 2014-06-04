@@ -6,10 +6,6 @@ class Hand
   def initialize
     @hand = []
   end
-  #?
-  def hand
-    @hand
-  end
 
   def ace_count
     count = 0
