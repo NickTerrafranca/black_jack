@@ -1,11 +1,11 @@
 require_relative 'card'
 require_relative 'deck'
+require 'pry'
 
 class Hand #< Array
   attr_reader :hand
-  def initialize(hand)
-    @hand = hand
-    @score
+  def initialize
+    @hand = []
   end
 
   def hand
@@ -19,7 +19,7 @@ class Hand #< Array
         count +=1
       end
     end
-  count
+    count
   end
 
   def gross_score
