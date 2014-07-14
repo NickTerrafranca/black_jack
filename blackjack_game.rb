@@ -49,7 +49,6 @@ class BlackjackGame
       puts "\nDealer was dealt #{@dealers_hand.first_card.show_card}"
       puts "Dealer was dealt #{@dealers_hand.last_card.show_card}"
       puts "Dealer's Score: #{@dealers_hand.score}"
-      puts #?
       while @dealers_hand.score < 17
         @dealers_hand.add_card(@deck)
         puts "Dealer was dealt #{@dealers_hand.last_card.show_card}"
